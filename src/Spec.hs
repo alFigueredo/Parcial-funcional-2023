@@ -95,3 +95,4 @@ correrTests = hspec $ do
   describe "Tests punto 5" $ do
     it "Función giveMeThree" $ do
       giveMeThree [dorothy, pachi, dorothy, gachi, dorothy, pachi, gachi, dorothy] `shouldMatchList` [pachi, gachi, pachi]
+      giveMeThree [pachi, dorothy, dorothy, gachi] `shouldMatchList` [pachi, gachi]

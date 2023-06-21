@@ -63,6 +63,11 @@ aplicarProceso :: Proceso -> Actividad
 aplicarProceso proceso animal = foldl (flip ($)) animal proceso
 
 -- Ejemplo: aplicarProceso ejemploProceso dorothy
+-- Se podría evaluar de acuerdo a sus resultados:
+-- peso . aplicarProceso ejemploProceso $ dorothy
+-- visitasMedicas . aplicarProceso ejemploProceso $ dorothy
+-- edad . aplicarProceso ejemploProceso $ dorothy
+-- estaEnfermo . aplicarProceso ejemploProceso $ dorothy
 
 -- Punto 4
 
@@ -79,4 +84,4 @@ mejoraSustentable animal actividad = rangoMejora . subtract (peso animal) . peso
 giveMeThree :: [Animal] -> [Animal]
 giveMeThree = take 3 . filter nombreFalopa
 
--- Según la evaluación diferida, la función toma solo lo que necesita. En este caso, si la cantidad de animales que se le pasa a la función giveMeThree es infinita, s por lo tanto, la función convergería siempre y cuando logre encontrar tres animales con nombre falopa.
+-- Según la evaluación diferida, la función toma solo lo que necesita. En este caso, si la cantidad de animales que se le pasa a la función giveMeThree es infinita, la función convergería siempre y cuando logre encontrar tres animales con nombre falopa.
