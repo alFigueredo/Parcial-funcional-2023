@@ -63,11 +63,6 @@ aplicarProceso :: Proceso -> Actividad
 aplicarProceso proceso animal = foldl (flip ($)) animal proceso
 
 -- Ejemplo: aplicarProceso ejemploProceso dorothy
--- Se podría evaluar de acuerdo a sus resultados:
--- peso . aplicarProceso ejemploProceso $ dorothy
--- visitasMedicas . aplicarProceso ejemploProceso $ dorothy
--- edad . aplicarProceso ejemploProceso $ dorothy
--- estaEnfermo . aplicarProceso ejemploProceso $ dorothy
 
 -- Punto 4
 
