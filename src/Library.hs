@@ -21,7 +21,7 @@ laPasoMal :: Animal -> Bool
 laPasoMal = any ((>30) . diasRecuperacion) . visitasMedicas
 
 nombreFalopa :: Animal -> Bool
-nombreFalopa animal = (=="i") . drop (subtract 1 . length . nombreAnimal $ animal) . nombreAnimal $ animal
+nombreFalopa = (=='i') . last . nombreAnimal
 
 -- Punto 2
 
