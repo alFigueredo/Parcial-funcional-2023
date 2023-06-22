@@ -3,5 +3,4 @@
 
 ## Integrantes
 
-- Alan Lionel Figueredo Aguiar (alFigueredo)
-- Legajo N°: 207.712-7
+- Alan Lionel Figueredo Aguiar (alFigueredo) Legajo: 207.712-7
