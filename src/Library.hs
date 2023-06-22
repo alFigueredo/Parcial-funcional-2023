@@ -49,7 +49,7 @@ festejoCumple animal = modificarPeso (-1) animal {
 
 chequeoDePeso :: Number -> Actividad
 chequeoDePeso pesoMinimo animal = animal {
-  estaEnfermo = not ((>pesoMinimo) . peso $ animal) || estaEnfermo animal
+  estaEnfermo = (|| estaEnfermo animal) . (<=pesoMinimo) . peso $ animal
 }
 
 -- Punto 3
